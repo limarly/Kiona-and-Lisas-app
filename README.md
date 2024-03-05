@@ -19,7 +19,7 @@ git clone https://github.com/kionahz/kiona-lisa-app.git
 ```
 2. Change the directory:
 ```
-cd Kiona-and-lisa-app
+cd Kiona-and-Lisas-app
 ```
 
 3. Run the code
