@@ -369,11 +369,16 @@ def render_pomodoro_q2():
         st.text(" ".join(st.session_state.tomatoes10))
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "backpack_7"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
         # button to return to the map
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "map_9"
             st.rerun()

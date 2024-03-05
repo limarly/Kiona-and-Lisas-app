@@ -204,11 +204,16 @@ def render_pomodoro_method():
                     </p>
                     """, unsafe_allow_html=True)
 
-    # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
-    with col_b:
-        # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
-        # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
-            st.session_state.place = "map_8"
-            st.rerun()
+        # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
+        col_a, col_c, col_b = st.columns((1, 7, 1.3))
+        with col_a:
+            # Rerunning the app when the button is click to go back to previous page
+            if st.button("<< | Go Back"):
+                st.session_state.place = "backpack_6"
+                st.rerun()
+        with col_b:
+            # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
+            # Rerunning the app when the button is clicked to continues the game
+            if st.button("Continue | >>"):
+                st.session_state.place = "map_8"
+                st.rerun()

@@ -49,6 +49,6 @@ def render_introduction():
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Let's start"):
+        if st.button("Let's start | >>"):
             st.session_state.place = "map_1"
             st.rerun()

@@ -1,6 +1,5 @@
 import streamlit as st
 
-# TODO: Formatting & Comments
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -65,57 +64,136 @@ def render_pomodoro_q1():
 
     st.divider()
 
-    # Series of columns to fit the layout
-    col3, col4 = st.columns((x, y))
-    with col3:
+    # Creating the columns for the tasks
+    col1a, col1b = st.columns((x, y))
+    col2a, col2b = st.columns((x, y))
+    col3a, col3b = st.columns((x, y))
+    col4a, col4b = st.columns((x, y))
+    col5a, col5b = st.columns((x, y))
+    col6a, col6b = st.columns((x, y))
+    col7a, col7b = st.columns((x, y))
+    col8a, col8b = st.columns((x, y))
+    col9a, col9b = st.columns((x, y))
+    col10a, col10b = st.columns((x, y))
+
+    with col1a:
         # Displaying the tasks
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
-                Search for drinking water<br>Build a Shelter<br>Search for food
+                Search for drinking water
             </p> 
             """, unsafe_allow_html=True)
 
     # Displaying the time inputs for the three tasks above
-    with col4:
+    with col1b:
         st.time_input('Label1', value=None, label_visibility="collapsed")
+
+    with col2a:
+        # Displaying the tasks
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Build a Shelter
+            </p> 
+            """, unsafe_allow_html=True)
+
+    # Displaying the time inputs for the three tasks above
+    with col2b:
         st.time_input('Label2', value=None, label_visibility="collapsed")
+
+    with col3a:
+        # Displaying the tasks
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Search for food
+            </p> 
+            """, unsafe_allow_html=True)
+
+    # Displaying the time inputs for the three tasks above
+    with col3b:
         st.time_input('Label3', value=None, label_visibility="collapsed")
 
-    col5, col6 = st.columns((x, y))
-    with col5:
+    with col4a:
         # Displaying the tasks
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
-                Collect Wood<br>Build a fire<br>Search for a container (for water or food)
+                Collect Wood
             </p> 
             """, unsafe_allow_html=True)
 
     # Displaying the time inputs for the three tasks above
-    with col6:
+    with col4b:
         st.time_input('Label4', value=None, label_visibility="collapsed")
+
+    with col5a:
+        # Displaying the tasks
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Build a fire
+            </p> 
+            """, unsafe_allow_html=True)
+
+    # Displaying the time inputs for the three tasks above
+    with col5b:
         st.time_input('Label5', value=None, label_visibility="collapsed")
+
+    with col6a:
+        # Displaying the tasks
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Search for a container (for water or food)
+            </p> 
+            """, unsafe_allow_html=True)
+
+    # Displaying the time inputs for the three tasks above
+    with col6b:
         st.time_input('Label6', value=None, label_visibility="collapsed")
 
-    col7, col8 = st.columns((x, y))
-    with col7:
+    with col7a:
         # Displaying the tasks
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
-                Build a weapon<br>Explore the surroundings<br>Collect Shells
+                Build a weapon
             </p> 
             """, unsafe_allow_html=True)
 
     # Displaying the time inputs for the three tasks above
-    with col8:
+    with col7b:
         st.time_input('Label7', value=None, label_visibility="collapsed")
+
+    with col8a:
+        # Displaying the tasks
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Explore the surroundings
+            </p> 
+            """, unsafe_allow_html=True)
+
+    # Displaying the time inputs for the three tasks above
+    with col8b:
         st.time_input('Label8', value=None, label_visibility="collapsed")
+
+    with col9a:
+        # Displaying the tasks
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Collect Shells
+            </p> 
+            """, unsafe_allow_html=True)
+
+    # Displaying the time inputs for the three tasks above
+    with col9b:
         st.time_input('Label9', value=None, label_visibility="collapsed")
 
-    col9, col10 = st.columns((x, y))
-    with col9:
+    with col10a:
         # Displaying a task
         st.markdown(
             f""" 
@@ -125,14 +203,19 @@ def render_pomodoro_q1():
             """, unsafe_allow_html=True)
 
     # Displaying the time inputs for the task above
-    with col10:
+    with col10b:
         st.time_input('Label10', value=None, label_visibility="collapsed")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "backpack_5"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "map_7"
             st.rerun()

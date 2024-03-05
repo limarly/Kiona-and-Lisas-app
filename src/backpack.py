@@ -125,11 +125,16 @@ def render_backpack_empty():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_1"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Start First Quest"):
+        if st.button("Start First Quest | >>"):
             st.session_state.place = "eisenhower_q1"
             st.rerun()
 
@@ -173,11 +178,16 @@ def render_backpack_1():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_2"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "eisenhower_method"
             st.rerun()
 
@@ -221,11 +231,16 @@ def render_backpack_2():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_3"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "eisenhower_q2"
             st.rerun()
 
@@ -270,11 +285,16 @@ def render_backpack_3():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_4"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "pirate"
             st.rerun()
 
@@ -318,11 +338,16 @@ def render_backpack_4():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_5"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "blurting_method"
             st.rerun()
 
@@ -366,11 +391,16 @@ def render_backpack_5():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_6"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "pomodoro_q1"
             st.rerun()
 
@@ -414,11 +444,16 @@ def render_backpack_6():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_7"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "pomodoro_method"
             st.rerun()
 
@@ -462,11 +497,16 @@ def render_backpack_7():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_8"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Continue"):
+        if st.button("Continue | >>"):
             st.session_state.place = "pomodoro_q2"
             st.rerun()
 
@@ -505,7 +545,7 @@ def render_backpack_8():
             </p>
             <p style="line-height:{line_height_backpack}; font-size: {font_size_backpack};">
                 You got a bucket of paint. You can use it to put the finishing touches to your boat and make it look 
-                pretty.<br><br>You filled you backpack all the way.<br>Good work! Your boat is now finally completely 
+                pretty.<br><br>You filled your backpack all the way.<br>Good work! Your boat is now finally completely 
                 repaired and you can sail away!
             </p>
             """, unsafe_allow_html=True
@@ -513,10 +553,15 @@ def render_backpack_8():
         st.image("pictures/shelly_without.png")
 
     # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
-    col_a, col_b = st.columns((8, 1))
+    col_a, col_c, col_b = st.columns((1, 7, 1.3))
+    with col_a:
+        # Rerunning the app when the button is click to go back to previous page
+        if st.button("<< | Go Back"):
+            st.session_state.place = "map_9"
+            st.rerun()
     with col_b:
         # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
         # Rerunning the app when the button is clicked to continues the game
-        if st.button("Sail Away"):
+        if st.button("Sail Away | >>"):
             st.session_state.place = "sail_away"
             st.rerun()
