@@ -1,5 +1,5 @@
 # App Development Exam Project - PIERATS
-This repository contains the code for the App Development Exam for the winter term 23/24 from Lisa Schmidt and Kiona Hitz.
+This repository contains the code for the App Development Exam for the winter term 23/24 from Lisa Marline Schmidt and Kiona Hitz.
 
 ## Description
 The App is called PIERATS - Productivity Island Expedition.
@@ -19,7 +19,7 @@ git clone https://github.com/kionahz/kiona-lisa-app.git
 ```
 2. Change the directory:
 ```
-cd kiona-lisa-app
+cd Kiona-and-lisa-app
 ```
 
 3. Run the code
